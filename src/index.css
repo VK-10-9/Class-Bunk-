@@ -1,3 +1,61 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    background: #0a0a0a;
+    background-image: 
+      linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 100%),
+      url('https://images.unsplash.com/photo-1596825205490-7263b87acf8b?auto=format&fit=crop&q=80&w=2000');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+  }
+}
+
+.bunker-panel {
+  background: linear-gradient(145deg, #1a1a1a 0%, #0d0d0d 100%);
+  border: 1px solid #333;
+  box-shadow: 
+    0 0 20px rgba(0,0,0,0.5),
+    inset 0 0 10px rgba(255,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.bunker-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: repeating-linear-gradient(
+    90deg,
+    #ff0000 0,
+    #ff0000 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  opacity: 0.3;
+}
+
+.warning-stripes {
+  background: repeating-linear-gradient(
+    45deg,
+    #000 0,
+    #000 10px,
+    #ff0 10px,
+    #ff0 20px
+  );
+  opacity: 0.1;
+}
+
+.emergency-text {
+  text-shadow: 0 0 10px rgba(255,0,0,0.5);
+}
+
+.rusty-border {
+  border-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQYV2NkQAX/GZH4/xkYGBhhAmAOSBJEwDkgAQCCrgQEqRgDDwAAAABJRU5ErkJggg==') 1;
+}
