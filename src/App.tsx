@@ -14,8 +14,8 @@ const POLL_OPTIONS = [
   'Undecided'
 ];
 
-const POLL_DATE = new Date('2024-12-24');
-const DEADLINE = new Date('2024-12-24');
+const POLL_DATE = new Date('2024-12-30');
+const DEADLINE = new Date('2024-12-29');
 DEADLINE.setHours(23, 59, 59, 999);
 
 // Use the same UUID as defined in the migration
